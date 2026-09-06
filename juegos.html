@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juegos de mesa — Bazar Central</title>
+<meta name="description" content="Juegos de mesa familiares, de estrategia, cartas, infantiles y rompecabezas en Bazar Central.">
+<meta property="og:title" content="Juegos de mesa — Bazar Central">
+<meta property="og:description" content="Clásicos que nunca fallan y títulos nuevos para las noches de juego.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://loremflickr.com/1200/630/boardgame,tabletop/all?lock=301">
+<link rel="icon" type="image/svg+xml" href="logo-placeholder.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo-placeholder.svg" alt="Bazar Central"></a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    <div class="navlinks" id="navlinks">
+      <div class="navitem">
+        <a href="cocina.html">Cocina <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="cocina.html#filtro-ollas-y-sartenes">Ollas y sartenes</a>
+          <a href="cocina.html#filtro-utensilios">Utensilios</a>
+          <a href="cocina.html#filtro-reposteria">Repostería</a>
+          <a href="cocina.html#filtro-accesorios-de-bano">Accesorios de baño</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="juguetes.html">Juguetes <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="juguetes.html#filtro-0-a-5-anos">0 a 5 años</a>
+          <a href="juguetes.html#filtro-6-a-10-anos">6 a 10 años</a>
+          <a href="juguetes.html#filtro-12-anos-en-adelante">12 años en adelante</a>
+          <a href="juguetes.html#filtro-didacticos">Didácticos</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="juegos.html" class="active">Juegos de mesa <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="juegos.html#filtro-familiares">Familiares</a>
+          <a href="juegos.html#filtro-estrategia">Estrategia</a>
+          <a href="juegos.html#filtro-cartas">Cartas</a>
+          <a href="juegos.html#filtro-infantiles">Infantiles</a>
+          <a href="juegos.html#filtro-rompecabezas">Rompecabezas</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="variados.html">Variados <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="variados.html#filtro-tornillos">Tornillos</a>
+          <a href="variados.html#filtro-clavos">Clavos</a>
+          <a href="variados.html#filtro-herramientas-manuales">Herramientas manuales</a>
+          <a href="variados.html#filtro-pintura">Pintura</a>
+          <a href="variados.html#filtro-cerraduras">Cerraduras</a>
+          <a href="variados.html#filtro-adhesivos-y-selladores">Adhesivos y selladores</a>
+          <span class="dropdown-label">Electricidad</span>
+          <a href="variados.html#filtro-cables-y-conectores">Cables y conectores</a>
+          <a href="variados.html#filtro-iluminacion">Iluminación</a>
+          <a href="variados.html#filtro-enchufes-y-tomas">Enchufes y tomas</a>
+          <a href="variados.html#filtro-pilas-y-baterias">Pilas y baterías</a>
+          <a href="variados.html#filtro-extensiones-y-protectores">Extensiones y protectores</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <a href="index.html">Inicio</a><span class="sep">/</span><span class="current">Juegos de mesa</span>
+  </div>
+</div>
+
+<section class="category-hero" style="--accent:var(--orange-deep)">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Juegos de mesa</div>
+      <h1>Reúne a los tuyos</h1>
+      <p>Clásicos que nunca fallan y títulos nuevos para las noches de juego que se alargan más de lo planeado.</p>
+    </div>
+    <div class="category-hero-photo"><img src="https://loremflickr.com/900/700/boardgame,tabletop/all?lock=301" alt="Juegos de mesa"></div>
+  </div>
+</section>
+
+<section class="subcat-section">
+  <div class="wrap">
+    <div class="subcat-grid">
+      <a class="subcat-card" href="#filtro-familiares" data-filter-target="familiares">
+        <div class="photo"><img src="https://loremflickr.com/500/400/family,boardgame/all?lock=302" alt="Familiares"></div>
+        <div class="body">
+          <h3>Familiares</h3>
+          <p>Para jugar todos juntos, sin importar la edad.</p>
+        </div>
+      </a>
+      <a class="subcat-card" href="#filtro-estrategia" data-filter-target="estrategia">
+        <div class="photo"><img src="https://loremflickr.com/500/400/strategy,game/all?lock=303" alt="Estrategia"></div>
+        <div class="body">
+          <h3>Estrategia</h3>
+          <p>Partidas largas para pensar cada jugada.</p>
+        </div>
+      </a>
+      <a class="subcat-card" href="#filtro-cartas" data-filter-target="cartas">
+        <div class="photo"><img src="https://loremflickr.com/500/400/cards,game/all?lock=304" alt="Cartas"></div>
+        <div class="body">
+          <h3>Cartas</h3>
+          <p>Rápidos, portátiles y siempre a mano.</p>
+        </div>
+      </a>
+      <a class="subcat-card" href="#filtro-infantiles" data-filter-target="infantiles">
+        <div class="photo"><img src="https://loremflickr.com/500/400/kids,boardgame/all?lock=305" alt="Infantiles"></div>
+        <div class="body">
+          <h3>Infantiles</h3>
+          <p>Reglas simples, diversión asegurada.</p>
+        </div>
+      </a>
+      <a class="subcat-card" href="#filtro-rompecabezas" data-filter-target="rompecabezas">
+        <div class="photo"><img src="https://loremflickr.com/500/400/puzzle,jigsaw/all?lock=306" alt="Rompecabezas"></div>
+        <div class="body">
+          <h3>Rompecabezas</h3>
+          <p>Para armar de a poco, en buena compañía.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="product-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Productos</h2>
+      <p>Tocá una categoría para filtrar — el resto se oculta automáticamente.</p>
+    </div>
+
+    <div class="filter-bar" data-filter-group style="--accent:var(--orange-deep)">
+      <button class="subcat-chip active" style="--accent:var(--orange-deep)" data-filter="all">Todos</button>
+      <button class="subcat-chip" style="--accent:var(--orange-deep)" data-filter="familiares">Familiares</button>
+      <button class="subcat-chip" style="--accent:var(--orange-deep)" data-filter="estrategia">Estrategia</button>
+      <button class="subcat-chip" style="--accent:var(--orange-deep)" data-filter="cartas">Cartas</button>
+      <button class="subcat-chip" style="--accent:var(--orange-deep)" data-filter="infantiles">Infantiles</button>
+      <button class="subcat-chip" style="--accent:var(--orange-deep)" data-filter="rompecabezas">Rompecabezas</button>
+    </div>
+
+    <div class="product-grid" data-category="Juegos de mesa">
+      <div class="product-card" data-subcat="familiares">
+        <div class="photo"><img src="https://loremflickr.com/400/400/trivia,boardgame/all?lock=221" alt="Juego familiar de preguntas"></div>
+        <div class="body"><h4>Juego familiar de preguntas</h4><div class="subtag">Familiares</div></div>
+      </div>
+      <div class="product-card" data-subcat="familiares">
+        <div class="photo"><img src="https://loremflickr.com/400/400/bingo,game/all?lock=222" alt="Bingo familiar"></div>
+        <div class="body"><h4>Bingo familiar</h4><div class="subtag">Familiares</div></div>
+      </div>
+      <div class="product-card" data-subcat="estrategia">
+        <div class="photo"><img src="https://loremflickr.com/400/400/strategy,boardgame/all?lock=223" alt="Juego de estrategia de conquista"></div>
+        <div class="body"><h4>Juego de estrategia de conquista</h4><div class="subtag">Estrategia</div></div>
+      </div>
+      <div class="product-card" data-subcat="estrategia">
+        <div class="photo"><img src="https://loremflickr.com/400/400/wooden,chess/all?lock=224" alt="Ajedrez de madera"></div>
+        <div class="body"><h4>Ajedrez de madera</h4><div class="subtag">Estrategia</div></div>
+      </div>
+      <div class="product-card" data-subcat="cartas">
+        <div class="photo"><img src="https://loremflickr.com/400/400/playing,cards/all?lock=225" alt="Mazo de cartas clásico"></div>
+        <div class="body"><h4>Mazo de cartas clásico</h4><div class="subtag">Cartas</div></div>
+      </div>
+      <div class="product-card" data-subcat="cartas">
+        <div class="photo"><img src="https://loremflickr.com/400/400/card,game,bluff/all?lock=226" alt="Juego de cartas de bluff"></div>
+        <div class="body"><h4>Juego de cartas de bluff</h4><div class="subtag">Cartas</div></div>
+      </div>
+      <div class="product-card" data-subcat="infantiles">
+        <div class="photo"><img src="https://loremflickr.com/400/400/memory,game,animals/all?lock=227" alt="Memotest infantil de animales"></div>
+        <div class="body"><h4>Memotest infantil de animales</h4><div class="subtag">Infantiles</div></div>
+      </div>
+      <div class="product-card" data-subcat="infantiles">
+        <div class="photo"><img src="https://loremflickr.com/400/400/kids,boardgame,colorful/all?lock=228" alt="Juego de mesa infantil de colores"></div>
+        <div class="body"><h4>Juego de mesa infantil de colores</h4><div class="subtag">Infantiles</div></div>
+      </div>
+      <div class="product-card" data-subcat="rompecabezas">
+        <div class="photo"><img src="https://loremflickr.com/400/400/jigsaw,landscape/all?lock=229" alt="Rompecabezas 500 piezas paisaje"></div>
+        <div class="body"><h4>Rompecabezas 500 piezas paisaje</h4><div class="subtag">Rompecabezas</div></div>
+      </div>
+      <div class="product-card" data-subcat="rompecabezas">
+        <div class="photo"><img src="https://loremflickr.com/400/400/jigsaw,city/all?lock=230" alt="Rompecabezas 1000 piezas ciudad"></div>
+        <div class="body"><h4>Rompecabezas 1000 piezas ciudad</h4><div class="subtag">Rompecabezas</div></div>
+      </div>
+    </div>
+
+    <div class="product-cta">
+      <p>¿No encontrás lo que buscás o querés consultar disponibilidad? Escribinos y te ayudamos al toque.</p>
+      <a class="cta" href="https://wa.me/5490000000000" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Bazar Central</h4>
+        <p>Todo lo que necesitás para tu casa, en un solo lugar. Visitanos o seguinos en redes para ver las novedades.</p>
+        <div class="social-row">
+          <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+          <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+          <a href="https://wa.me/5490000000000" aria-label="WhatsApp" target="_blank" rel="noopener">WA</a>
+        </div>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contacto</h4>
+        <a href="tel:+5490000000000">+54 9 00 0000-0000</a>
+        <a href="mailto:hola@bazarcentral.com">hola@bazarcentral.com</a>
+        <p style="margin-top:10px;">Lun a sáb, 9 a 20 hs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Cómo llegar</h4>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps?q=Bazar&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Bazar Central"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">Bazar Central — un mercado, cuatro mundos.</div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5490000000000" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.11h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.34c0-4.53 3.69-8.22 8.24-8.22 4.55 0 8.24 3.69 8.24 8.22 0 4.53-3.69 8.2-8.24 8.2zm4.52-6.15c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.67 4.24 3.75.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.19.21-.58.21-1.08.15-1.19-.06-.11-.23-.17-.48-.29z"/></svg>
+  <span>Escribinos</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

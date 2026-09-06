@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cocina — Bazar Central</title>
+<meta name="description" content="Ollas, sartenes, utensilios, repostería y accesorios de baño en Bazar Central. Piezas elegidas para durar.">
+<meta property="og:title" content="Cocina — Bazar Central">
+<meta property="og:description" content="Utensilios de cocina elegidos para durar y verse bien en tu mesada.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://loremflickr.com/1200/630/kitchen,cookware/all?lock=101">
+<link rel="icon" type="image/svg+xml" href="logo-placeholder.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo-placeholder.svg" alt="Bazar Central"></a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    <div class="navlinks" id="navlinks">
+      <div class="navitem">
+        <a href="cocina.html" class="active">Cocina <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="cocina.html#filtro-ollas-y-sartenes">Ollas y sartenes</a>
+          <a href="cocina.html#filtro-utensilios">Utensilios</a>
+          <a href="cocina.html#filtro-reposteria">Repostería</a>
+          <a href="cocina.html#filtro-accesorios-de-bano">Accesorios de baño</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="juguetes.html">Juguetes <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="juguetes.html#filtro-0-a-5-anos">0 a 5 años</a>
+          <a href="juguetes.html#filtro-6-a-10-anos">6 a 10 años</a>
+          <a href="juguetes.html#filtro-12-anos-en-adelante">12 años en adelante</a>
+          <a href="juguetes.html#filtro-didacticos">Didácticos</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="juegos.html">Juegos de mesa <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="juegos.html#filtro-familiares">Familiares</a>
+          <a href="juegos.html#filtro-estrategia">Estrategia</a>
+          <a href="juegos.html#filtro-cartas">Cartas</a>
+          <a href="juegos.html#filtro-infantiles">Infantiles</a>
+          <a href="juegos.html#filtro-rompecabezas">Rompecabezas</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="variados.html">Variados <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="variados.html#filtro-tornillos">Tornillos</a>
+          <a href="variados.html#filtro-clavos">Clavos</a>
+          <a href="variados.html#filtro-herramientas-manuales">Herramientas manuales</a>
+          <a href="variados.html#filtro-pintura">Pintura</a>
+          <a href="variados.html#filtro-cerraduras">Cerraduras</a>
+          <a href="variados.html#filtro-adhesivos-y-selladores">Adhesivos y selladores</a>
+          <span class="dropdown-label">Electricidad</span>
+          <a href="variados.html#filtro-cables-y-conectores">Cables y conectores</a>
+          <a href="variados.html#filtro-iluminacion">Iluminación</a>
+          <a href="variados.html#filtro-enchufes-y-tomas">Enchufes y tomas</a>
+          <a href="variados.html#filtro-pilas-y-baterias">Pilas y baterías</a>
+          <a href="variados.html#filtro-extensiones-y-protectores">Extensiones y protectores</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <a href="index.html">Inicio</a><span class="sep">/</span><span class="current">Cocina</span>
+  </div>
+</div>
+
+<section class="category-hero" style="--accent:var(--orange)">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Cocina</div>
+      <h1>Para quienes cocinan con ganas</h1>
+      <p>Desde lo esencial hasta esos accesorios que no sabías que necesitabas. Piezas pensadas para durar y para verse bien en tu mesada.</p>
+    </div>
+    <div class="category-hero-photo"><img src="https://loremflickr.com/900/700/kitchen,cookware/all?lock=101" alt="Cocina"></div>
+  </div>
+</section>
+
+<section class="subcat-section">
+  <div class="wrap">
+    <div class="subcat-grid">
+      <a class="subcat-card" href="#filtro-ollas-y-sartenes" data-filter-target="ollas-y-sartenes">
+        <div class="photo"><img src="https://loremflickr.com/500/400/pots,pans/all?lock=102" alt="Ollas y sartenes"></div>
+        <div class="body">
+          <h3>Ollas y sartenes</h3>
+          <p>Para el uso de todos los días, resistentes al fuego directo.</p>
+        </div>
+      </a>
+      <a class="subcat-card" href="#filtro-utensilios" data-filter-target="utensilios">
+        <div class="photo"><img src="https://loremflickr.com/500/400/kitchen,utensils/all?lock=103" alt="Utensilios"></div>
+        <div class="body">
+          <h3>Utensilios</h3>
+          <p>Cuchillos, espátulas, cucharones y lo que nunca falta en la cocina.</p>
+        </div>
+      </a>
+      <a class="subcat-card" href="#filtro-reposteria" data-filter-target="reposteria">
+        <div class="photo"><img src="https://loremflickr.com/500/400/baking,pastry/all?lock=104" alt="Repostería"></div>
+        <div class="body">
+          <h3>Repostería</h3>
+          <p>Moldes, mangas y todo para hornear.</p>
+        </div>
+      </a>
+      <a class="subcat-card" href="#filtro-accesorios-de-bano" data-filter-target="accesorios-de-bano">
+        <div class="photo"><img src="https://loremflickr.com/500/400/bathroom,accessories/all?lock=106" alt="Accesorios de baño"></div>
+        <div class="body">
+          <h3>Accesorios de baño</h3>
+          <p>Organizadores y accesorios para el baño.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="product-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Productos</h2>
+      <p>Tocá una categoría para filtrar — el resto se oculta automáticamente.</p>
+    </div>
+
+    <div class="filter-bar" data-filter-group style="--accent:var(--orange)">
+      <button class="subcat-chip active" style="--accent:var(--orange)" data-filter="all">Todos</button>
+      <button class="subcat-chip" style="--accent:var(--orange)" data-filter="ollas-y-sartenes">Ollas y sartenes</button>
+      <button class="subcat-chip" style="--accent:var(--orange)" data-filter="utensilios">Utensilios</button>
+      <button class="subcat-chip" style="--accent:var(--orange)" data-filter="reposteria">Repostería</button>
+      <button class="subcat-chip" style="--accent:var(--orange)" data-filter="accesorios-de-bano">Accesorios de baño</button>
+    </div>
+
+    <div class="product-grid" data-category="Cocina">
+      <div class="product-card" data-subcat="ollas-y-sartenes">
+        <div class="photo"><img src="https://loremflickr.com/400/400/steel,pot/all?lock=201" alt="Olla de acero inoxidable N°26"></div>
+        <div class="body"><h4>Olla de acero inoxidable N°26</h4><div class="subtag">Ollas y sartenes</div></div>
+      </div>
+      <div class="product-card" data-subcat="ollas-y-sartenes">
+        <div class="photo"><img src="https://loremflickr.com/400/400/frying,pan/all?lock=202" alt="Sartén antiadherente 24cm"></div>
+        <div class="body"><h4>Sartén antiadherente 24cm</h4><div class="subtag">Ollas y sartenes</div></div>
+      </div>
+      <div class="product-card" data-subcat="ollas-y-sartenes">
+        <div class="photo"><img src="https://loremflickr.com/400/400/pressure,cooker/all?lock=203" alt="Olla a presión 6 litros"></div>
+        <div class="body"><h4>Olla a presión 6 litros</h4><div class="subtag">Ollas y sartenes</div></div>
+      </div>
+      <div class="product-card" data-subcat="utensilios">
+        <div class="photo"><img src="https://loremflickr.com/400/400/kitchen,knives/all?lock=204" alt="Set de cuchillos de cocina x5"></div>
+        <div class="body"><h4>Set de cuchillos de cocina x5</h4><div class="subtag">Utensilios</div></div>
+      </div>
+      <div class="product-card" data-subcat="utensilios">
+        <div class="photo"><img src="https://loremflickr.com/400/400/silicone,spatula/all?lock=205" alt="Espátula de silicona"></div>
+        <div class="body"><h4>Espátula de silicona</h4><div class="subtag">Utensilios</div></div>
+      </div>
+      <div class="product-card" data-subcat="utensilios">
+        <div class="photo"><img src="https://loremflickr.com/400/400/ladle,kitchen/all?lock=206" alt="Cucharón de acero inoxidable"></div>
+        <div class="body"><h4>Cucharón de acero inoxidable</h4><div class="subtag">Utensilios</div></div>
+      </div>
+      <div class="product-card" data-subcat="reposteria">
+        <div class="photo"><img src="https://loremflickr.com/400/400/cake,mold/all?lock=207" alt="Molde para tortas desmontable"></div>
+        <div class="body"><h4>Molde para tortas desmontable</h4><div class="subtag">Repostería</div></div>
+      </div>
+      <div class="product-card" data-subcat="reposteria">
+        <div class="photo"><img src="https://loremflickr.com/400/400/pastry,bag/all?lock=208" alt="Manga pastelera con boquillas"></div>
+        <div class="body"><h4>Manga pastelera con boquillas</h4><div class="subtag">Repostería</div></div>
+      </div>
+      <div class="product-card" data-subcat="accesorios-de-bano">
+        <div class="photo"><img src="https://loremflickr.com/400/400/shower,organizer/all?lock=209" alt="Organizador de ducha"></div>
+        <div class="body"><h4>Organizador de ducha</h4><div class="subtag">Accesorios de baño</div></div>
+      </div>
+      <div class="product-card" data-subcat="accesorios-de-bano">
+        <div class="photo"><img src="https://loremflickr.com/400/400/towel,holder/all?lock=210" alt="Portarrollos de baño"></div>
+        <div class="body"><h4>Portarrollos de baño</h4><div class="subtag">Accesorios de baño</div></div>
+      </div>
+    </div>
+
+    <div class="product-cta">
+      <p>¿No encontrás lo que buscás o querés consultar disponibilidad? Escribinos y te ayudamos al toque.</p>
+      <a class="cta" href="https://wa.me/5490000000000" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Bazar Central</h4>
+        <p>Todo lo que necesitás para tu casa, en un solo lugar. Visitanos o seguinos en redes para ver las novedades.</p>
+        <div class="social-row">
+          <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+          <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+          <a href="https://wa.me/5490000000000" aria-label="WhatsApp" target="_blank" rel="noopener">WA</a>
+        </div>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contacto</h4>
+        <a href="tel:+5490000000000">+54 9 00 0000-0000</a>
+        <a href="mailto:hola@bazarcentral.com">hola@bazarcentral.com</a>
+        <p style="margin-top:10px;">Lun a sáb, 9 a 20 hs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Cómo llegar</h4>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps?q=Bazar&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Bazar Central"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">Bazar Central — un mercado, cuatro mundos.</div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5490000000000" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.11h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.34c0-4.53 3.69-8.22 8.24-8.22 4.55 0 8.24 3.69 8.24 8.22 0 4.53-3.69 8.2-8.24 8.2zm4.52-6.15c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.67 4.24 3.75.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.19.21-.58.21-1.08.15-1.19-.06-.11-.23-.17-.48-.29z"/></svg>
+  <span>Escribinos</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

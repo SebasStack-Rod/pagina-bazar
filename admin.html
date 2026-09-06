@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Cargar productos — Bazar Central</title>
+<link rel="icon" type="image/svg+xml" href="logo-placeholder.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .admin-wrap{ max-width:720px; margin:0 auto; padding:60px 32px 100px; }
+  .admin-wrap h1{ font-size:2rem; }
+  .admin-wrap ol{ margin:22px 0; padding-left:22px; color:var(--ink-soft); line-height:1.8; }
+  .admin-wrap code{ background:rgba(34,26,20,.07); padding:2px 6px; border-radius:6px; font-size:.9em; }
+  .admin-note{ background:rgba(226,103,43,.1); border:1px solid rgba(226,103,43,.35); border-radius:14px; padding:18px 20px; margin:24px 0; font-size:.95rem; }
+  .form-embed{ margin-top:36px; border-radius:16px; overflow:hidden; border:1px solid rgba(34,26,20,.12); min-height:400px; display:flex; align-items:center; justify-content:center; color:var(--ink-soft); text-align:center; padding:40px; }
+</style>
+</head>
+<body>
+<div class="admin-wrap">
+  <a href="index.html" style="color:var(--ink-soft);">&larr; Volver al sitio</a>
+  <h1 style="margin-top:16px;">Cargar y gestionar productos</h1>
+  <p style="margin-top:10px; color:var(--ink-soft);">Esta página es solo para el equipo del bazar — no aparece en el menú del sitio público.</p>
+
+  <ol>
+    <li>Entrá a <strong>airtable.com</strong> y creá una cuenta gratis (si no la tenés ya).</li>
+    <li>Creá una base nueva con una tabla llamada <code>Productos</code> y estas columnas:
+      <code>Nombre</code> (texto), <code>Categoria</code> (texto: Cocina / Juguetes / Juegos de mesa / Variados / Electricidad),
+      <code>Subcategoria</code> (texto), <code>Foto</code> (tipo adjunto/attachment),
+      <code>SinStock</code> (casilla / checkbox).</li>
+    <li>Para cargar un producto: agregá una fila, subí la foto en la columna <code>Foto</code>,
+      y tildá <code>SinStock</code> cuando se agote. Se refleja en la web en segundos.</li>
+    <li>Pedile a Sebastián que complete <code>BASE_ID</code> y <code>API_KEY</code> en el
+      archivo <code>script.js</code> del sitio (una sola vez, al conectar todo).</li>
+  </ol>
+
+  <div class="admin-note">
+    <strong>Importante sobre seguridad:</strong> la clave que se usa en el sitio debe ser un
+    token de <strong>solo lectura</strong> (así cualquiera que vea el código de la página
+    puede leer los productos, pero no puede borrar ni modificar nada). Para cargar y editar
+    productos, Felipe debe entrar directamente a Airtable o usar el formulario de acá abajo,
+    no la web pública.
+  </div>
+
+  <div class="form-embed">
+    Acá va el formulario de Airtable para cargar productos sin entrar a Airtable directamente.<br><br>
+    Cuando tengan la base creada, generen un enlace de tipo "Form" desde Airtable y péguenlo
+    en un &lt;iframe&gt; acá, o pásenmelo y lo dejo embebido.
+  </div>
+</div>
+</body>
+</html>

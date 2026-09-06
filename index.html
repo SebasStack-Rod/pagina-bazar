@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bazar Central — Cocina, juguetes, juegos de mesa y variados</title>
+<meta name="description" content="Bazar Central: utensilios de cocina, juguetes, juegos de mesa y artículos variados. Una variedad real, elegida con cuidado, en un solo lugar.">
+<meta property="og:title" content="Bazar Central">
+<meta property="og:description" content="Todo lo que necesitás para tu casa, en un solo lugar.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://loremflickr.com/1200/630/kitchenware,cookware/all?lock=21">
+<link rel="icon" type="image/svg+xml" href="logo-placeholder.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html"><img class="logo-mark" src="logo-placeholder.svg" alt="Bazar Central"></a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    <div class="navlinks" id="navlinks">
+      <div class="navitem">
+        <a href="cocina.html">Cocina <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="cocina.html#filtro-ollas-y-sartenes">Ollas y sartenes</a>
+          <a href="cocina.html#filtro-utensilios">Utensilios</a>
+          <a href="cocina.html#filtro-reposteria">Repostería</a>
+          <a href="cocina.html#filtro-accesorios-de-bano">Accesorios de baño</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="juguetes.html">Juguetes <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="juguetes.html#filtro-0-a-5-anos">0 a 5 años</a>
+          <a href="juguetes.html#filtro-6-a-10-anos">6 a 10 años</a>
+          <a href="juguetes.html#filtro-12-anos-en-adelante">12 años en adelante</a>
+          <a href="juguetes.html#filtro-didacticos">Didácticos</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="juegos.html">Juegos de mesa <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="juegos.html#filtro-familiares">Familiares</a>
+          <a href="juegos.html#filtro-estrategia">Estrategia</a>
+          <a href="juegos.html#filtro-cartas">Cartas</a>
+          <a href="juegos.html#filtro-infantiles">Infantiles</a>
+          <a href="juegos.html#filtro-rompecabezas">Rompecabezas</a>
+        </div>
+      </div>
+      <div class="navitem">
+        <a href="variados.html">Variados <span class="chevron" aria-hidden="true">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="variados.html#filtro-tornillos">Tornillos</a>
+          <a href="variados.html#filtro-clavos">Clavos</a>
+          <a href="variados.html#filtro-herramientas-manuales">Herramientas manuales</a>
+          <a href="variados.html#filtro-pintura">Pintura</a>
+          <a href="variados.html#filtro-cerraduras">Cerraduras</a>
+          <a href="variados.html#filtro-adhesivos-y-selladores">Adhesivos y selladores</a>
+          <span class="dropdown-label">Electricidad</span>
+          <a href="variados.html#filtro-cables-y-conectores">Cables y conectores</a>
+          <a href="variados.html#filtro-iluminacion">Iluminación</a>
+          <a href="variados.html#filtro-enchufes-y-tomas">Enchufes y tomas</a>
+          <a href="variados.html#filtro-pilas-y-baterias">Pilas y baterías</a>
+          <a href="variados.html#filtro-extensiones-y-protectores">Extensiones y protectores</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Todo lo que necesitás para tu casa</h1>
+      <p>Cocina, juguetes, juegos de mesa y variados — una variedad real, elegida con cuidado para que encuentres justo lo que buscabas sin recorrer media ciudad.</p>
+      <a href="#categorias" class="cta">Explorar categorías</a>
+    </div>
+    <div class="hero-collage">
+      <div class="tile t1"><img src="https://loremflickr.com/600/700/kitchenware,cookware/all?lock=21" alt="Utensilios de cocina"></div>
+      <div class="tile t2"><img src="https://loremflickr.com/500/420/toys,colorful/all?lock=32" alt="Juguetes"></div>
+      <div class="tile t3"><img src="https://loremflickr.com/500/440/boardgame,dice/all?lock=43" alt="Juegos de mesa"></div>
+      <div class="tile t4"><img src="https://loremflickr.com/420/380/kitchen,utensils/all?lock=54" alt="Utensilios"></div>
+    </div>
+  </div>
+</section>
+
+<section class="bento-section" id="categorias">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Elegí tu mundo</h2>
+      <p>Cada rincón tiene su propio carácter. Explora el que necesitas hoy — mañana quizás sea otro.</p>
+    </div>
+    <div class="bento">
+      <a class="bento-card c-cocina" href="cocina.html">
+        <img src="https://loremflickr.com/700/900/kitchenware,utensils/all?lock=1" alt="Cocina">
+        <div class="overlay"></div>
+        <span class="tag">Cocina</span>
+        <div class="label"><h3>Para quienes cocinan con ganas</h3><p>Utensilios y accesorios de uso diario</p></div>
+      </a>
+      <a class="bento-card c-variados" href="variados.html">
+        <img src="https://loremflickr.com/700/600/tools,workshop/all?lock=401" alt="Variados">
+        <div class="overlay"></div>
+        <span class="tag">Variados</span>
+        <div class="label"><h3>Lo que no puede faltar en casa</h3><p>Ferretería, pintura y arreglos rápidos</p></div>
+      </a>
+      <a class="bento-card c-juguetes" href="juguetes.html">
+        <img src="https://loremflickr.com/700/600/toys,colorful/all?lock=2" alt="Juguetes">
+        <div class="overlay"></div>
+        <span class="tag">Juguetes</span>
+        <div class="label"><h3>Horas de juego, cero pantallas</h3><p>Para todas las edades</p></div>
+      </a>
+      <a class="bento-card c-juegos" href="juegos.html">
+        <img src="https://loremflickr.com/700/600/boardgame,dice/all?lock=3" alt="Juegos de mesa">
+        <div class="overlay"></div>
+        <span class="tag">Juegos de mesa</span>
+        <div class="label"><h3>Reúne a los tuyos</h3><p>Clásicos y novedades</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="editorial" id="cocina">
+  <div class="wrap">
+    <div class="ed-text">
+      <div class="kicker" style="color:var(--orange)">Cocina</div>
+      <h2>Herramientas que hacen que cocinar se sienta menos a trabajo</h2>
+      <p>Desde lo esencial hasta esos accesorios que no sabías que necesitabas. Piezas pensadas para durar y para verse bien en tu mesada.</p>
+      <a href="cocina.html" class="ed-link" style="color:var(--orange)">Ver la colección de cocina</a>
+    </div>
+    <div class="ed-photos">
+      <div class="big"><img src="https://loremflickr.com/900/560/kitchen,cookware/all?lock=11" alt="Set de cocina"></div>
+      <div class="small"><img src="https://loremflickr.com/420/420/kitchen,knife/all?lock=12" alt="Utensilios de cocina"></div>
+      <div class="small"><img src="https://loremflickr.com/420/420/bathroom,accessories/all?lock=13" alt="Accesorios de baño"></div>
+    </div>
+  </div>
+</section>
+
+<section class="editorial reverse" id="juguetes">
+  <div class="wrap">
+    <div class="ed-text">
+      <div class="kicker" style="color:var(--blue)">Juguetes</div>
+      <h2>Curiosidad, imaginación y mucho movimiento</h2>
+      <p>Una selección para todas las edades, pensada para acompañar el juego libre y esas tardes en que hay que soltar la pantalla.</p>
+      <a href="juguetes.html" class="ed-link" style="color:var(--blue)">Ver la colección de juguetes</a>
+    </div>
+    <div class="ed-photos">
+      <div class="big"><img src="https://loremflickr.com/900/560/toys,kids/all?lock=22" alt="Juguetes surtidos"></div>
+      <div class="small"><img src="https://loremflickr.com/420/420/toys,blocks/all?lock=23" alt="Bloques de construcción"></div>
+      <div class="small"><img src="https://loremflickr.com/420/420/toys,plush/all?lock=24" alt="Peluches"></div>
+    </div>
+  </div>
+</section>
+
+<section class="editorial" id="juegos">
+  <div class="wrap">
+    <div class="ed-text">
+      <div class="kicker" style="color:var(--orange-deep)">Juegos de mesa</div>
+      <h2>La excusa perfecta para juntar a todos alrededor de una mesa</h2>
+      <p>Clásicos que nunca fallan y títulos nuevos para las noches de juego que se alargan más de lo planeado.</p>
+      <a href="juegos.html" class="ed-link" style="color:var(--orange-deep)">Ver la colección de juegos</a>
+    </div>
+    <div class="ed-photos">
+      <div class="big"><img src="https://loremflickr.com/900/560/boardgame,tabletop/all?lock=31" alt="Juegos de mesa"></div>
+      <div class="small"><img src="https://loremflickr.com/420/420/dice,game/all?lock=33" alt="Dados"></div>
+      <div class="small"><img src="https://loremflickr.com/420/420/cards,game/all?lock=34" alt="Cartas"></div>
+    </div>
+  </div>
+</section>
+
+<section class="value-strip">
+  <div class="wrap">
+    <div class="value-item"><h3>Variedad curada</h3><p>Nada de relleno. Cada categoría tiene su propia selección.</p></div>
+    <div class="value-item"><h3>Envío a todo el país</h3><p>Llega a donde estés, sin importar el tamaño del pedido.</p></div>
+    <div class="value-item"><h3>Calidad verificada</h3><p>Revisamos cada producto antes de sumarlo al catálogo.</p></div>
+    <div class="value-item"><h3>Atención cercana</h3><p>Personas reales respondiendo tus dudas, no un bot.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Bazar Central</h4>
+        <p>Todo lo que necesitás para tu casa, en un solo lugar. Visitanos o seguinos en redes para ver las novedades.</p>
+        <div class="social-row">
+          <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+          <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+          <a href="https://wa.me/5490000000000" aria-label="WhatsApp" target="_blank" rel="noopener">WA</a>
+        </div>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contacto</h4>
+        <a href="tel:+5490000000000">+54 9 00 0000-0000</a>
+        <a href="mailto:hola@bazarcentral.com">hola@bazarcentral.com</a>
+        <p style="margin-top:10px;">Lun a sáb, 9 a 20 hs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Cómo llegar</h4>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps?q=Bazar&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Bazar Central"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">Bazar Central — un mercado, cuatro mundos.</div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5490000000000" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.11h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.34c0-4.53 3.69-8.22 8.24-8.22 4.55 0 8.24 3.69 8.24 8.22 0 4.53-3.69 8.2-8.24 8.2zm4.52-6.15c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.67 4.24 3.75.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.19.21-.58.21-1.08.15-1.19-.06-.11-.23-.17-.48-.29z"/></svg>
+  <span>Escribinos</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
