@@ -42,6 +42,37 @@
   });
 })();
 
+/* ---------- 2.2) Menú contextual del nav: se mantiene visible 3 segundos al sacar el cursor ---------- */
+(function () {
+  const DEMORA_MS = 3000;
+
+  document.querySelectorAll('.navitem').forEach((item) => {
+    let temporizador = null;
+
+    function mostrar() {
+      if (temporizador) {
+        clearTimeout(temporizador);
+        temporizador = null;
+      }
+      item.classList.add('dropdown-visible');
+    }
+
+    function programarOcultado() {
+      if (temporizador) clearTimeout(temporizador);
+      temporizador = setTimeout(() => {
+        item.classList.remove('dropdown-visible');
+        temporizador = null;
+      }, DEMORA_MS);
+    }
+
+    item.addEventListener('mouseenter', mostrar);
+    item.addEventListener('mouseleave', programarOcultado);
+    // Si el foco entra/sale por teclado, mismo comportamiento
+    item.addEventListener('focusin', mostrar);
+    item.addEventListener('focusout', programarOcultado);
+  });
+})();
+
 /* ---------- 2.5) Filtros de productos (muestran SOLO la subcategoría elegida) ----------
    Se puede activar un filtro de 3 formas:
    a) Tocando un botón de la barra de filtros (arriba de "Productos").

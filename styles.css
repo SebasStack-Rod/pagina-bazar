@@ -66,7 +66,8 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
   z-index:60;
 }
 .navitem:hover .dropdown,
-.navitem:focus-within .dropdown{
+.navitem:focus-within .dropdown,
+.navitem.dropdown-visible .dropdown{
   opacity:1; pointer-events:auto; transform:translateY(0);
 }
 .dropdown a{
