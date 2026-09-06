@@ -27,14 +27,32 @@
   <ol>
     <li>Entrá a <strong>airtable.com</strong> y creá una cuenta gratis (si no la tenés ya).</li>
     <li>Creá una base nueva con una tabla llamada <code>Productos</code> y estas columnas:
-      <code>Nombre</code> (texto), <code>Categoria</code> (texto: Cocina / Juguetes / Juegos de mesa / Variados / Electricidad),
-      <code>Subcategoria</code> (texto), <code>Foto</code> (tipo adjunto/attachment),
-      <code>SinStock</code> (casilla / checkbox).</li>
+      <ul style="margin-top:8px; line-height:1.8;">
+        <li><code>Nombre</code> (texto) — el nombre del producto.</li>
+        <li><code>Categoria</code> (texto) — tiene que ser <strong>exactamente</strong> uno de estos,
+          tal cual está escrito: <code>Cocina</code>, <code>Juguetes</code>, <code>Juegos de mesa</code>,
+          <code>Variados</code>, <code>Variados-Electricidad</code>.</li>
+        <li><code>Subcategoria</code> (texto) — escribila tal cual aparece en la página
+          (ej: <code>Ollas y sartenes</code>, <code>Repostería</code>). No hace falta preocuparse
+          por mayúsculas ni tildes, la web la empareja sola con el filtro correcto.</li>
+        <li><code>Foto</code> (tipo adjunto/attachment).</li>
+        <li><code>SinStock</code> (casilla / checkbox).</li>
+      </ul>
+    </li>
     <li>Para cargar un producto: agregá una fila, subí la foto en la columna <code>Foto</code>,
-      y tildá <code>SinStock</code> cuando se agote. Se refleja en la web en segundos.</li>
+      y tildá <code>SinStock</code> cuando se agote. La página lo revisa sola cada 30 segundos
+      (y también apenas alguien vuelve a mirar el celular), así que aparece solo, sin que nadie
+      tenga que tocar nada del lado del sitio.</li>
     <li>Pedile a Sebastián que complete <code>BASE_ID</code> y <code>API_KEY</code> en el
       archivo <code>script.js</code> del sitio (una sola vez, al conectar todo).</li>
   </ol>
+
+  <div class="admin-note">
+    <strong>Sobre el cartel de "Sin stock":</strong> apenas se tilda la casilla <code>SinStock</code>
+    en Airtable, el producto se muestra en la web con la foto apagada y un cartel de
+    "Sin stock" encima — no hace falta borrarlo ni tocar nada más. Cuando vuelva a haber
+    stock, basta con destildarlo.
+  </div>
 
   <div class="admin-note">
     <strong>Importante sobre seguridad:</strong> la clave que se usa en el sitio debe ser un

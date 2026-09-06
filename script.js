@@ -109,26 +109,57 @@
   if (hash.indexOf('#filtro-') === 0) {
     activarFiltro(hash.replace('#filtro-', ''), { scrollTo: true });
   }
+
+  // Se expone para que la sección de Airtable (más abajo) pueda re-aplicar el filtro
+  // que el usuario tenía elegido después de que los productos se actualizan solos.
+  window.BazarCentral = window.BazarCentral || {};
+  window.BazarCentral.activarFiltro = activarFiltro;
 })();
 
-/* ---------- 4) Productos desde Airtable ----------
+/* ---------- 4) Productos desde Airtable, en tiempo real ----------
    PASOS PARA CONECTAR (Sebastián / Felipe):
    1. Crear una cuenta gratis en airtable.com y una base con una tabla "Productos"
-      con estos campos: Nombre (texto), Categoria (texto: Cocina/Juguetes/Juegos de mesa),
-      Subcategoria (texto), Foto (adjunto de imagen), SinStock (casilla / checkbox).
+      con estos campos:
+        - Nombre        (texto)
+        - Categoria     (texto — tiene que ser EXACTAMENTE uno de estos, tal cual,
+                          mayúsculas incluidas: "Cocina", "Juguetes", "Juegos de mesa",
+                          "Variados", "Variados-Electricidad")
+        - Subcategoria  (texto — escribir el nombre tal cual aparece en la página,
+                          por ejemplo "Ollas y sartenes" o "Repostería"; el sitio
+                          se encarga solo de emparejarlo con el filtro correcto)
+        - Foto          (adjunto de imagen)
+        - SinStock      (casilla / checkbox)
    2. En Airtable: Account > Developer hub > Personal access token.
       Crear un token de SOLO LECTURA (scope: data.records:read) limitado a esta base.
       ¡No usar un token con permiso de escritura acá! queda visible en el código fuente.
-   3. Completar BASE_ID, TABLE_NAME y API_KEY abajo.
+   3. Completar BASE_ID y API_KEY abajo.
    4. Opcional: para que Felipe cargue productos sin entrar a Airtable directamente,
       Airtable tiene una vista de tipo "Formulario" que se puede compartir como link
       o embeber en admin.html (ver ese archivo).
+
+   TIEMPO REAL: la página vuelve a consultar Airtable sola cada REFRESH_MS
+   (por defecto cada 30 segundos) y también apenas alguien vuelve a la pestaña.
+   No hace falta recargar la página a mano — un cambio en Airtable (agregar un
+   producto, tildar "Sin stock", etc.) aparece solo en poco tiempo.
 ========================================================= */
 const AIRTABLE_CONFIG = {
   baseId: 'TU_BASE_ID_AQUI',     // ej: appXXXXXXXXXXXXXX
   tableName: 'Productos',
   apiKey: 'TU_API_KEY_AQUI',     // Personal Access Token de SOLO LECTURA
+  refreshMs: 30000,              // cada cuánto se revisan cambios (30000 = 30 segundos)
 };
+
+// Convierte "Ollas y sartenes" -> "ollas-y-sartenes" para que calce con los
+// mismos valores que ya usan los botones de filtro y las fotos de subcategoría.
+function slugify(texto) {
+  return (texto || '')
+    .toString()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
 
 async function cargarProductos() {
   const grids = document.querySelectorAll('.product-grid');
@@ -141,6 +172,10 @@ async function cargarProductos() {
 
   for (const grid of grids) {
     const categoria = grid.dataset.category;
+    const bar = grid.parentElement.querySelector('.filter-bar[data-filter-group]');
+    const chipActivo = bar ? bar.querySelector('[data-filter].active') : null;
+    const filtroActivo = chipActivo ? chipActivo.dataset.filter : 'all';
+
     try {
       const url = `https://api.airtable.com/v0/${AIRTABLE_CONFIG.baseId}/${encodeURIComponent(AIRTABLE_CONFIG.tableName)}?filterByFormula=${encodeURIComponent(`{Categoria}='${categoria}'`)}`;
       const res = await fetch(url, {
@@ -158,8 +193,9 @@ async function cargarProductos() {
         const f = r.fields || {};
         const foto = (f.Foto && f.Foto[0] && f.Foto[0].url) || '';
         const sinStock = !!f.SinStock;
+        const subcatSlug = slugify(f.Subcategoria);
         return `
-          <div class="product-card ${sinStock ? 'out-of-stock' : ''}">
+          <div class="product-card ${sinStock ? 'out-of-stock' : ''}" data-subcat="${subcatSlug}">
             ${sinStock ? '<div class="ribbon">Sin stock</div>' : ''}
             <div class="photo">${foto ? `<img src="${foto}" alt="${f.Nombre || ''}">` : ''}</div>
             <div class="body">
@@ -168,6 +204,12 @@ async function cargarProductos() {
             </div>
           </div>`;
       }).join('');
+
+      // Vuelve a aplicar el filtro que la persona tenía elegido antes de este refresco,
+      // así no "se le resetea" el filtro cada 30 segundos sin darse cuenta.
+      if (window.BazarCentral && window.BazarCentral.activarFiltro) {
+        window.BazarCentral.activarFiltro(filtroActivo);
+      }
     } catch (err) {
       grid.innerHTML = '<div class="product-empty">No se pudieron cargar los productos. Revisa la conexion con Airtable.</div>';
       console.error(err);
@@ -176,3 +218,10 @@ async function cargarProductos() {
 }
 
 document.addEventListener('DOMContentLoaded', cargarProductos);
+
+// Actualización en tiempo real: reconsulta Airtable sola cada REFRESH_MS...
+setInterval(cargarProductos, AIRTABLE_CONFIG.refreshMs);
+// ...y también apenas alguien vuelve a esta pestaña (por si pasó tiempo con el celular bloqueado).
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') cargarProductos();
+});
