@@ -44,7 +44,7 @@
 
 /* ---------- 2.2) Menú contextual del nav: se mantiene visible 2 segundos al sacar el cursor ---------- */
 (function () {
-  const DEMORA_MS = 2000;
+  const DEMORA_MS = 1000;
   const items = Array.from(document.querySelectorAll('.navitem'));
   const temporizadores = new Map();
 
