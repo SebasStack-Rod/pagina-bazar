@@ -42,34 +42,47 @@
   });
 })();
 
-/* ---------- 2.2) Menú contextual del nav: se mantiene visible 3 segundos al sacar el cursor ---------- */
+/* ---------- 2.2) Menú contextual del nav: se mantiene visible 2 segundos al sacar el cursor ---------- */
 (function () {
-  const DEMORA_MS = 3000;
+  const DEMORA_MS = 2000;
+  const items = Array.from(document.querySelectorAll('.navitem'));
+  const temporizadores = new Map();
 
-  document.querySelectorAll('.navitem').forEach((item) => {
-    let temporizador = null;
-
-    function mostrar() {
-      if (temporizador) {
-        clearTimeout(temporizador);
-        temporizador = null;
-      }
-      item.classList.add('dropdown-visible');
+  function cerrarYa(item) {
+    if (temporizadores.has(item)) {
+      clearTimeout(temporizadores.get(item));
+      temporizadores.delete(item);
     }
+    item.classList.remove('dropdown-visible');
+  }
 
-    function programarOcultado() {
-      if (temporizador) clearTimeout(temporizador);
-      temporizador = setTimeout(() => {
-        item.classList.remove('dropdown-visible');
-        temporizador = null;
-      }, DEMORA_MS);
+  function mostrar(item) {
+    if (temporizadores.has(item)) {
+      clearTimeout(temporizadores.get(item));
+      temporizadores.delete(item);
     }
+    // Cierra de inmediato cualquier otro menú abierto para que no se superpongan
+    items.forEach((otro) => {
+      if (otro !== item) cerrarYa(otro);
+    });
+    item.classList.add('dropdown-visible');
+  }
 
-    item.addEventListener('mouseenter', mostrar);
-    item.addEventListener('mouseleave', programarOcultado);
+  function programarOcultado(item) {
+    if (temporizadores.has(item)) clearTimeout(temporizadores.get(item));
+    const t = setTimeout(() => {
+      item.classList.remove('dropdown-visible');
+      temporizadores.delete(item);
+    }, DEMORA_MS);
+    temporizadores.set(item, t);
+  }
+
+  items.forEach((item) => {
+    item.addEventListener('mouseenter', () => mostrar(item));
+    item.addEventListener('mouseleave', () => programarOcultado(item));
     // Si el foco entra/sale por teclado, mismo comportamiento
-    item.addEventListener('focusin', mostrar);
-    item.addEventListener('focusout', programarOcultado);
+    item.addEventListener('focusin', () => mostrar(item));
+    item.addEventListener('focusout', () => programarOcultado(item));
   });
 })();
 
